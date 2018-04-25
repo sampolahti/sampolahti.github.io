@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+	<title>Kuninkaantien lukio</title>
+
+	<meta charset="UTF-8">
+	
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="jquery.min.js "></script>
+    <script src="jquery.bxslider.min.js "></script>
+	<script src="vertical2.js "></script>
+	<script src="slider.js "></script>
+	
+	<link href=" slider.css" rel="stylesheet" type="text/css"> 
+
+	<link rel="stylesheet" href="jquery.bxslider3.css" type="text/css">   
+	<link rel="stylesheet" href="tyyli.css" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Work+Sans:400,500&amp;subset=latin-ext" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Play:700" rel="stylesheet">
+	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+span[data-cmchighlight=''] {padding:0px!important;margin:0px!important;display:inline!important;float:none!important;position:static!important;-webkit-print-color-adjust:exact!important}</style><style type="text/css">.cmcredaction {color:#D3D3D3!important;background:#D3D3D3!important;-webkit-user-select:none!important;-khtml-user-select:none !important;-moz-user-select:none!important;-ms-user-select:none!important;-o-user-select:none!important;user-select:none!important;-webkit-print-color-adjust:exact!important}
+</style>
+
+
+</head> 
+<body style="zoom: 1;">
+
+<div id="sivu">
+
+<!--muokkaukset alkaa-->
+<table id="headerLogo">
+<td class="rajaton" valign="middle" border="0"><a href="index.html"><img src="./tiedostot/kunkkuLogoTransparent.png" id="kunkkuKuva" align="left" ></a></td>
+<td class="rajaton"><p class="otsikko">Kuninkaantien lukio <p/><p class="otsikko2">Aika kunkku lukioksi</p></td>
+</table>
+
+<script src="code.js"></script>
+
+<div id="menuLine">
+<button onclick="navbarMobile(); animaatio()" class="dropDownBtn">avaa/sulje valikko</button>
+<a href="index.html">
+	<img src="./tiedostot/kunkkuLogoWhite.png" id="kunkkuWhite">
+</a>
+
+</div>
+
+<div id="dropDown" style="display: none; margin-top: 64px;">
+	<ul class="menu">
+	
+		<li class="menu-sub">
+			<button onclick="change_hae()">Hae Kunkkuun!<i class="material-icons" style="font-size: 1.1em;">&#xe5c5;</i></button>
+		</li>
+		<div id="hae-sub" style="display: none;">
+			<li class="menu-sub"><a href="pyrkija.html">Kouluun pyrkijälle</a></li>
+			<li class="menu-sub"><a href="painotus.html">Painotuksemme</a></li>
+			<li class="menu-sub"><a href="tilat.html">Tilat</a></li>
+		</div>
+		
+		<li class="menu"><a href="english.html">In English</a></li>
+		<li class="menu"><a href="rehtorinpalsta.html">Rehtorin palsta</a></li>
+		
+		<li class="menu-sub">
+			<button onclick="change_opiskelu()">Opiskelu<i class="material-icons" style="font-size: 1.1em;">&#xe5c5;</i></button>
+		</li>
+		<div id="opiskelu-sub" style="display: none;">
+			<li class="menu-sub"><a href="opkh.html">Opiskelijakunta</a></li>
+			<li class="menu-sub"><a href="lomakkeet.html">Lomakkeet ja oppaat</a></li>
+			<li class="menu-sub"><a href="yotutkinto.html">Ylioppilastutkinto</a></li>
+			<li class="menu-sub"><a href="ohjaus.html">Opinto-ohjaus</a></li>
+			<li class="menu-sub"><a href="diplomit.html">Lukiodiplomit</a></li>
+		</div>
+		
+		<li class="menu-sub">
+			<button onclick="change_linkki()">Linkkejä<i class="material-icons" style="font-size: 1.1em;">&#xe5c5;</i></button>
+		</li>
+		<div id="linkki-sub" style="display: none;">
+			<li class="menu-sub"><a href="https://mail.fujitsucloud.fi/owa" target="_blank">Sähköposti</a></li>
+			<li class="menu-sub"><a href="https://fronter.com/espoo/" target="_blank">Fronter</a></li>
+			<li class="menu-sub"><a href="https://digabi.fi/" target="_blank">Digabi</a></li>
+			<li class="menu-sub"><a href="http://www.hs.fi/paivanlehti/">Helsingin Sanomat</a></li>
+			<li class="menu-sub"><a href="http://mot.kielikone.fi/mot/kuninkaantie/netmot.exe">Sanakirja</a></li>
+		</div>
+		
+		<li class="menu"><a href="http://aikakunkkulukioksi.blogspot.fi/">Kruunun Takaa -blogi</a></li>
+		<li class="menu"><a href="https://wilma.espoo.fi/">Wilma</a></li>
+		<li class="menu"><a href="#">Tapahtumakalenteri</a></li>
+		
+		<li class="menu-sub">
+			<button onclick="change_yhteystiedot()">Yhteystiedot<i class="material-icons" style="font-size: 1.1em;">&#xe5c5;</i></button>
+		</li>
+		<div id="yhteystiedot-sub" style="display: none;">
+			<li class="menu-sub"><a href="koulu.html">Kuninkaantien lukio</a></li>
+			<li class="menu-sub"><a href="henkilokunta.html" target="_blank">Henkilöstö</a></li>
+			<li class="menu-sub"><a href="johtokunta.html" target="_blank">Johtokunta</a></li>
+		</div>
+		
+	</ul>
+</div>
+
+
+<div class="slider" id="main-slider" style="width: 100%; overflow:auto"><!-- outermost container element -->
+	<div class="slider-wrapper"><!-- innermost wrapper element -->
+		
+		<div id="kuva1" class="slide"></div>
+		<div id="kuva2" class="slide"></div>
+		<div id="kuva3" class="slide"></div>
+		<div id="kuva4" class="slide"></div>
+		<div id="kuva5" class="slide"></div>
+		<div id="kuva6" class="slide"></div>
+		<div id="kuva7" class="slide"></div>
+		<div id="kuva8" class="slide"></div>
+		
+	</div>
+</div>
+
+
+<div id="vasen">
+<div class="sidebarmenu">
+<ul id="sidebarmenu1">
+
+<li><a href="#" class=" subfolderstyle">Hae Kunkkuun!<span class="arrowStyle"><i class="material-icons">play_arrow</i></span></a> 
+	<ul style="left: 180px; visibility: visible; display: none;">
+		<li><a href="pyrkija.html">Kouluun pyrkijälle</a></li>
+		<li><a href="painotus.html">Painotuksemme</a></li>
+		<li><a href="tilat.html">Tilat</a></li>
+	</ul>
+</li>
+
+<li><a href="english.html">In English</a></li>
+<li><a href="rehtorinpalsta.html">Rehtorin palsta</a></li>
+
+<li><a href="#" class=" subfolderstyle">Opiskelu<span class="arrowStyle"><i class="material-icons">play_arrow</i></span></a>
+	<ul style="left: 180px; visibility: visible; display: none;">
+		<li><a href="opkh.html">Opiskelijakunta</a></li>
+		<li><a href="lomakkeet.html">Lomakkeet ja oppaat</a></li>
+		<li><a href="yotutkinto.html">Ylioppilastutkinto</a></li>
+		<li><a href="ohjaus.html">Opinto-ohjaus</a></li>
+		<li><a href="diplomit.html">Lukiodiplomit</a></li>		
+	
+	</ul>  
+</li>
+
+<li><a href="#" class=" subfolderstyle">Linkkejä<span class="arrowStyle"><i class="material-icons">play_arrow</i></span></a>
+	<ul style="left: 180px; visibility: visible; display: none;"> 
+		<li><a href="https://mail.fujitsucloud.fi/owa" target="_blank">Sähköposti</a></li>
+		<li><a href="https://fronter.com/espoo/" target="_blank">Fronter</a></li>
+		<li><a href="https://digabi.fi/" target="_blank">Digabi</a></li>
+		<li><a href="http://www.hs.fi/paivanlehti/" target="_blank">Helsingin Sanomat</a></li>
+		<li><a href="http://mot.kielikone.fi/mot/kuninkaantie/netmot.exe" target="_blank">Sanakirja</a></li>
+    </ul>
+</li>
+
+<li><a href="http://aikakunkkulukioksi.blogspot.fi/" target="_blank">Kruunun Takaa -blogi</a></li>
+<li><a href="https://wilma.espoo.fi/" target="_blank">Wilma</a></li>
+<li><a href="./tiedostot/kalenteri17-18.pdf" target="_blank">Tapahtumakalenteri</a></li>
+
+<li><a href="#" class=" subfolderstyle">Yhteystiedot<span class="arrowStyle"><i class="material-icons">play_arrow</i></span></a>
+	<ul style="left: 180px; visibility: visible; display: none;">
+		<li><a href="koulu.html">Kuninkaantien lukio</a></li>
+		<li><a href="henkilokunta.html">Henkilöstö</a></li>
+		<li><a href="johtokunta.html">Johtokunta</a></li>
+	</ul>
+</li>
+</div>
+	<iframe src="https://www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fkuninkaantienlukio&amp;width=180&amp;height=427&amp;colorscheme=light&amp;show_faces=false&amp;header=true&amp;stream=true&amp;show_border=true" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:180px; height:427px;" allowTransparency="true"></iframe>
+<br>
+
+<a href="https://instagram.com/kuninkaantienlukio/" target="_new">Kunkku Instagramissa
+	<br>
+	<i class="fa fa-instagram" id="ig"></i>
+</a>
+
+
+</div><!--vasen reuna loppuu-->
+
+<!-- 
+side bar loppu ja sivun alku; sama kaikilla sivuilla 
+
+HUOM! kopioi myös some-div alempaa
+-->
+
+<div id="keski">
+<h1>Kuninkaantie High School</h1>
+
+<p>Kuninkaantie High School is a information technology and media oriented high school located in Espoo. The school features modern and practical classrooms, equipment and software, physical education facilities, and a positive learning atmosphere. Information technology is a special area of focus.
+
+</p>
+<img class="Img_600" src="./tiedostot/eng1.jpg">
+<p>Alongside normal high school studies, students may work on projects and host theme days along the year. The theme days and other activities and events are organized by the student council.</p>
+<p>Kuninkaantie High School is located in the centre of Espoo, next to the train station. <br />
+  Our school shares the building with a swimming hall and a café and two commercial gyms. Our school also has its own gym and a sports hall. </p>
+  
+  <img class="Img_300" src="./tiedostot/eng2.jpg"> <img class="Img_300" src="./tiedostot/eng3.jpg">
+<p>Based on student surveys, the best things at Kuninkaantie are the atmosphere and motivation of both students and teachers. This translates into excellent results in national comparisons and in many rankings Kuninkaantie High School is one of the top ten high schools in Finland.</p>
+<p>We have a wide range of classes and good opportunities to study languages, for example Spanish and French. The language studies, but also other subjects, eg physics, include a lot of international trips. Our school has modern and high quality equipment. Computers and a variety of online services are an integral part of everyday school work. </p>
+<img class="Img_600" src="./tiedostot/eng4.jpg">
+
+<p>Finnish high schools offer students a good general education to support their continued studies, providing a wide range of subjects and courses to choose from. Students start high school at the age of sixteen. Studies usually take three to four years. Before graduating high school the students take the finals in at least four subjects. Usually after high school Finnish students continue their studies at college or university.</p>
+<img class="Img_600" src="./tiedostot/eng5.jpg">
+
+
+<div id="SoMe">
+<h2>Kuninkaantie High School in social media</h2>
+<a href="https://instagram.com/kuninkaantienlukio/" target="_new">
+	<i class="fa fa-instagram" id="ig"></i>
+</a>
+
+<a href="https://www.facebook.com/kuninkaantienlukio/" target="_new">
+	<i class="fa fa-facebook-square" id="face"></i>
+</a>
+</div>
+
+</div>	
+
+
+<!--Sivu päättyy --> 
+</div>
+
+
+</body>
+</html>

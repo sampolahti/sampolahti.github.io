@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+	<title>Kuninkaantien lukio</title>
+
+	<meta charset="UTF-8">
+	
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="jquery.min.js "></script>
+    <script src="jquery.bxslider.min.js "></script>
+	<script src="vertical2.js "></script>
+	<script src="slider.js "></script>
+	
+	<link href=" slider.css" rel="stylesheet" type="text/css"> 
+
+	<link rel="stylesheet" href="jquery.bxslider3.css" type="text/css">   
+	<link rel="stylesheet" href="tyyli.css" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Work+Sans:400,500&amp;subset=latin-ext" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Play:700" rel="stylesheet">
+	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+span[data-cmchighlight=''] {padding:0px!important;margin:0px!important;display:inline!important;float:none!important;position:static!important;-webkit-print-color-adjust:exact!important}</style><style type="text/css">.cmcredaction {color:#D3D3D3!important;background:#D3D3D3!important;-webkit-user-select:none!important;-khtml-user-select:none !important;-moz-user-select:none!important;-ms-user-select:none!important;-o-user-select:none!important;user-select:none!important;-webkit-print-color-adjust:exact!important}
+</style>
+
+
+</head> 
+<body style="zoom: 1;">
+
+<div id="sivu">
+
+<!--muokkaukset alkaa-->
+<table id="headerLogo">
+<td class="rajaton" valign="middle" border="0"><a href="index.html"><img src="./tiedostot/kunkkuLogoTransparent.png" id="kunkkuKuva" align="left" ></a></td>
+<td class="rajaton"><p class="otsikko">Kuninkaantien lukio <p/><p class="otsikko2">Aika kunkku lukioksi</p></td>
+</table>
+
+<script src="code.js"></script>
+
+<div id="menuLine">
+<button onclick="navbarMobile(); animaatio()" class="dropDownBtn">avaa/sulje valikko</button>
+<a href="index.html">
+	<img src="./tiedostot/kunkkuLogoWhite.png" id="kunkkuWhite">
+</a>
+
+</div>
+
+<div id="dropDown" style="display: none; margin-top: 64px;">
+	<ul class="menu">
+	
+		<li class="menu-sub">
+			<button onclick="change_hae()">Hae Kunkkuun!<i class="material-icons" style="font-size: 1.1em;">&#xe5c5;</i></button>
+		</li>
+		<div id="hae-sub" style="display: none;">
+			<li class="menu-sub"><a href="pyrkija.html">Kouluun pyrkijälle</a></li>
+			<li class="menu-sub"><a href="painotus.html">Painotuksemme</a></li>
+			<li class="menu-sub"><a href="tilat.html">Tilat</a></li>
+		</div>
+		
+		<li class="menu"><a href="english.html">In English</a></li>
+		<li class="menu"><a href="rehtorinpalsta.html">Rehtorin palsta</a></li>
+		
+		<li class="menu-sub">
+			<button onclick="change_opiskelu()">Opiskelu<i class="material-icons" style="font-size: 1.1em;">&#xe5c5;</i></button>
+		</li>
+		<div id="opiskelu-sub" style="display: none;">
+			<li class="menu-sub"><a href="opkh.html">Opiskelijakunta</a></li>
+			<li class="menu-sub"><a href="lomakkeet.html">Lomakkeet ja oppaat</a></li>
+			<li class="menu-sub"><a href="yotutkinto.html">Ylioppilastutkinto</a></li>
+			<li class="menu-sub"><a href="ohjaus.html">Opinto-ohjaus</a></li>
+			<li class="menu-sub"><a href="diplomit.html">Lukiodiplomit</a></li>
+		</div>
+		
+		<li class="menu-sub">
+			<button onclick="change_linkki()">Linkkejä<i class="material-icons" style="font-size: 1.1em;">&#xe5c5;</i></button>
+		</li>
+		<div id="linkki-sub" style="display: none;">
+			<li class="menu-sub"><a href="https://mail.fujitsucloud.fi/owa" target="_blank">Sähköposti</a></li>
+			<li class="menu-sub"><a href="https://fronter.com/espoo/" target="_blank">Fronter</a></li>
+			<li class="menu-sub"><a href="https://digabi.fi/" target="_blank">Digabi</a></li>
+			<li class="menu-sub"><a href="http://www.hs.fi/paivanlehti/">Helsingin Sanomat</a></li>
+			<li class="menu-sub"><a href="http://mot.kielikone.fi/mot/kuninkaantie/netmot.exe">Sanakirja</a></li>
+		</div>
+		
+		<li class="menu"><a href="http://aikakunkkulukioksi.blogspot.fi/">Kruunun Takaa -blogi</a></li>
+		<li class="menu"><a href="https://wilma.espoo.fi/">Wilma</a></li>
+		<li class="menu"><a href="#">Tapahtumakalenteri</a></li>
+		
+		<li class="menu-sub">
+			<button onclick="change_yhteystiedot()">Yhteystiedot<i class="material-icons" style="font-size: 1.1em;">&#xe5c5;</i></button>
+		</li>
+		<div id="yhteystiedot-sub" style="display: none;">
+			<li class="menu-sub"><a href="koulu.html">Kuninkaantien lukio</a></li>
+			<li class="menu-sub"><a href="henkilokunta.html" target="_blank">Henkilöstö</a></li>
+			<li class="menu-sub"><a href="johtokunta.html" target="_blank">Johtokunta</a></li>
+		</div>
+		
+	</ul>
+</div>
+
+
+<div class="slider" id="main-slider" style="width: 100%; overflow:auto"><!-- outermost container element -->
+	<div class="slider-wrapper"><!-- innermost wrapper element -->
+		
+		<div id="kuva1" class="slide"></div>
+		<div id="kuva2" class="slide"></div>
+		<div id="kuva3" class="slide"></div>
+		<div id="kuva4" class="slide"></div>
+		<div id="kuva5" class="slide"></div>
+		<div id="kuva6" class="slide"></div>
+		<div id="kuva7" class="slide"></div>
+		<div id="kuva8" class="slide"></div>
+		
+	</div>
+</div>
+
+
+<div id="vasen">
+<div class="sidebarmenu">
+<ul id="sidebarmenu1">
+
+<li><a href="#" class=" subfolderstyle">Hae Kunkkuun!<span class="arrowStyle"><i class="material-icons">play_arrow</i></span></a> 
+	<ul style="left: 180px; visibility: visible; display: none;">
+		<li><a href="pyrkija.html">Kouluun pyrkijälle</a></li>
+		<li><a href="painotus.html">Painotuksemme</a></li>
+		<li><a href="tilat.html">Tilat</a></li>
+	</ul>
+</li>
+
+<li><a href="english.html">In English</a></li>
+<li><a href="rehtorinpalsta.html">Rehtorin palsta</a></li>
+
+<li><a href="#" class=" subfolderstyle">Opiskelu<span class="arrowStyle"><i class="material-icons">play_arrow</i></span></a>
+	<ul style="left: 180px; visibility: visible; display: none;">
+		<li><a href="opkh.html">Opiskelijakunta</a></li>
+		<li><a href="lomakkeet.html">Lomakkeet ja oppaat</a></li>
+		<li><a href="yotutkinto.html">Ylioppilastutkinto</a></li>
+		<li><a href="ohjaus.html">Opinto-ohjaus</a></li>
+		<li><a href="diplomit.html">Lukiodiplomit</a></li>		
+	
+	</ul>  
+</li>
+
+<li><a href="#" class=" subfolderstyle">Linkkejä<span class="arrowStyle"><i class="material-icons">play_arrow</i></span></a>
+	<ul style="left: 180px; visibility: visible; display: none;"> 
+		<li><a href="https://mail.fujitsucloud.fi/owa" target="_blank">Sähköposti</a></li>
+		<li><a href="https://fronter.com/espoo/" target="_blank">Fronter</a></li>
+		<li><a href="https://digabi.fi/" target="_blank">Digabi</a></li>
+		<li><a href="http://www.hs.fi/paivanlehti/" target="_blank">Helsingin Sanomat</a></li>
+		<li><a href="http://mot.kielikone.fi/mot/kuninkaantie/netmot.exe" target="_blank">Sanakirja</a></li>
+    </ul>
+</li>
+
+<li><a href="http://aikakunkkulukioksi.blogspot.fi/" target="_blank">Kruunun Takaa -blogi</a></li>
+<li><a href="https://wilma.espoo.fi/" target="_blank">Wilma</a></li>
+<li><a href="./tiedostot/kalenteri17-18.pdf" target="_blank">Tapahtumakalenteri</a></li>
+
+<li><a href="#" class=" subfolderstyle">Yhteystiedot<span class="arrowStyle"><i class="material-icons">play_arrow</i></span></a>
+	<ul style="left: 180px; visibility: visible; display: none;">
+		<li><a href="koulu.html">Kuninkaantien lukio</a></li>
+		<li><a href="henkilokunta.html">Henkilöstö</a></li>
+		<li><a href="johtokunta.html">Johtokunta</a></li>
+	</ul>
+</li>
+</div>
+	<iframe src="https://www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fkuninkaantienlukio&amp;width=180&amp;height=427&amp;colorscheme=light&amp;show_faces=false&amp;header=true&amp;stream=true&amp;show_border=true" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:180px; height:427px;" allowTransparency="true"></iframe>
+<br>
+
+<a href="https://instagram.com/kuninkaantienlukio/" target="_new">Kunkku Instagramissa
+	<br>
+	<i class="fa fa-instagram" id="ig"></i>
+</a>
+
+
+</div><!--vasen reuna loppuu-->
+
+<!-- 
+side bar loppu ja sivun alku; sama kaikilla sivuilla 
+
+HUOM! kopioi myös some-div alempaa
+-->
+
+<div id="keski">
+<h1>Lomakkeet ja oppaat</h1>
+<p>T&auml;lle sivulle on koottu erilaisia hy&ouml;dyllisi&auml; julkaisuja. Useimpiin käytännön kysymyksiin vastaus löytyy opinto-oppaasta.</p>
+
+<table>
+<tr>
+	<td class="main">
+		<p><a href="./tiedostot/kalenteri17-18.pdf" target="_blank"><b>Tapahtumakalenteri</b></a> (.pdf)</p>
+	</td>
+
+	<td class="hide">
+		<p>Lukuvuoden 2017 - 2018 tapahtumakalenterissa on kerrottu keskeiset päivämäärät.</p>
+	</td>
+	</tr>
+	
+<tr>
+	<td class="main">
+		<p><a href="./tiedostot/kurssikuvaukset.pdf" target="_blank"><b>Kurssikuvaukset</b></a> (.pdf)</p>
+	</td>
+			
+	<td class="hide">
+		<p>Tarkemmat tiedot kaikista Kuninkaantien lukion opetussuunnitelmaan kuuluvista <strong>vanhan</strong> opetussuunnitelman kursseista.<br><br>Uudessa opetussuunnitelmassa ovat kurssikuvaukset erikseen.</p>
+	</td>
+</tr>
+
+<tr>
+	<td class="main">
+		<p><a href="http://www.espoo.fi/yhteishaku" target="_blank"><b>Infoa yhteishausta</b></a> </p>
+	</td>
+		
+	<td class="hide">
+		<p>Espoon kaupungin yhteishaku.</p>
+	</td>
+</tr>		
+		
+<tr>
+	<td class="main">
+		<p><a href="./tiedostot/wilma_valintojen_tekeminen.pdf" target="_blank"><b>Wilman ohje</b></a> (.pdf)</p>
+	</td>
+
+	<td class="hide">
+		<p>Tarkemmat ohjeet kurssivalintojen tekemiseen Wilmassa.</p>
+	</td>
+</tr>
+
+<tr>
+	<td class="main">
+		<p><a href="./tiedostot/oppikirjat20172018.pdf" target="_blank"><b>Kirjalista</b></a> (.pdf)</p>
+	</td>
+
+	<td class="hide">
+		<p>Lukuvuoden 2017 - 2018 oppikirjalista.</p>
+	</td>
+</tr>
+	
+<tr>
+	<td class="main">
+		<p><a href="./tiedostot/ops2016.pdf" target="_blank"><b>Opetussuunnitelma</b></a> (.pdf)</p>
+	</td>
+
+	<td class="hide">
+		<p>Vuonna 2016 ja sen jälkeen aloittaneiden uusi opetussuunnitelma.</p>
+	</td>
+</tr>
+
+<tr>
+	<td class="main">
+		<p><a href="./tiedostot/loma-anomus.pdf" target="_blank"><b>Loma-anomusohje</b></a> (.pdf)</p>
+	</td>
+
+	<td class="hide">
+		 <p>Ohje loma-anomuksen tekemiseen Wilmassa.</p>
+	</td>
+</tr>
+</table>
+	
+	<div id="SoMe">
+<h2>Kunkku somessa</h2>
+<a href="https://instagram.com/kuninkaantienlukio/" target="_new">
+	<i class="fa fa-instagram" id="ig"></i>
+</a>
+
+<a href="https://www.facebook.com/kuninkaantienlukio/" target="_new">
+	<i class="fa fa-facebook-square" id="face"></i>
+</a>
+</div>
+</div>	
+
+
+<!--Sivu päättyy --> 
+</div>
+
+
+</body>
+</html>
