@@ -40,7 +40,7 @@ img {
 p, a {
 	font-size: 1.375em;
 	line-height: 1.1em;
-	font-kerning: 1em;
+	font-kerning: normal;
 	color: #000;
 }
 
@@ -60,13 +60,13 @@ h3 {
 .text {
 	margin: 3% 10% 0% 10%;
 	line-height: 1.3em;
-	font-kerning: 1.1em;
+	font-kerning: normal;
 }
 
 p.finalTxt {
 	margin: 3% 10% 0% 10%;
 	line-height: 1.3em;
-	font-kerning: 1.1em;
+	font-kerning: normal;
 }
 
 html, body {
@@ -74,7 +74,7 @@ html, body {
 	line-height: 1; 
 	font-family: 'Barlow', Arial, Tahoma, sans-serif;
 	height: 100%;
-	/*ios fix alkaa*/overflow-y: scroll; -webkit-overflow-scrolling: touch/*ios fix loppuu*/
+	/*ios fix alkaa*/overflow-y: scroll; -webkit-overflow-scrolling: touch;/*ios fix loppuu*/
 	background: #2026b2;
 	overflow: hidden;
 }
@@ -228,7 +228,7 @@ html, body {
 	width: auto;
 	display: block;
 	margin: auto;
-	padding: 15p;x
+	padding: 15px;
 }
 
 /*3rd slide*/
@@ -462,7 +462,7 @@ html, body {
 	p.finalTxt {
 		margin: 3% 10% 0% 10%;
 		line-height: 1.3em;
-		font-kerning: 1.1em;
+		font-kerning: normal;
 		font-size: 1.1em;
 	}
 
@@ -529,7 +529,7 @@ html, body {
 	p.finalTxt {
 		margin: 3% 10% 0% 10%;
 		line-height: 1.3em;
-		font-kerning: 1.1em;
+		font-kerning: normal;
 		font-size: 0.95em;
 	}
 
@@ -597,7 +597,7 @@ html, body {
 	p.finalTxt {
 		margin: 3% 10% 0% 10%;
 		line-height: 1.3em;
-		font-kerning: 1.1em;
+		font-kerning: normal;
 		font-size: 0.75em;
 	}
 }
@@ -729,7 +729,7 @@ and (max-width: 812px) { /*iPhone fix*/
 	p.finalTxt {
 		margin: 1% 10% 0% 10%;
 		line-height: 1.3em;
-		font-kerning: 1.1em;
+		font-kerning: normal;
 		font-size: 0.9em;
 	}
 
