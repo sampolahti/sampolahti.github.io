@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sampo Lahti Business site</title>
+	<link href="swiper/swiper_mod.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Barlow:400,700&amp;subset=latin-ext" rel="stylesheet">
+	<link rel="stylesheet" href="bus.css">
+	<meta charset="UTF-8">
+
+</head>
+<body>
+
+<div class="swiper-container">
+	<div class="swiper-wrapper">
+		<div class="swiper-slide firstSlide">
+
+			<div id="firstHeader">
+				<h1 class="textHeader">Sampon Bisnes Sivu</h1>
+			</div>
+
+			<div class="fiftypercent">
+				<img class="fiftyPercentImg" src="browser-website.svg">
+				<h2>Good-looking websites...</h2><p class="titleParagraph">I don't compromise with quality</p>
+			</div>
+
+			<div class="fiftypercent">
+				<img class="fiftyPercentImg" src="bag-of-money.svg">
+				<h2>...Very cheaply!</h2><p class="titleParagraph">Website prices starting from only 50€!</p>
+			</div>
+
+
+		</div>
+		<div class="swiper-slide secondSlide">
+
+			<div class="thirtypercent hide-this">
+				<img src="smartphone.svg">
+				<img src="tablet.svg">
+				<img src="computer.svg">
+			</div>
+
+			<div class="seventypercent">
+
+				<div id="secondHeader">
+					<h2 class="textHeader">Mobile responsive</h2>
+				</div>
+
+				<p class="text">All of the websites I design are mobile responsive. This means that they naturally scale to any device, making my websites look good <strong>on all devices.</strong> This eliminates the need for a stand-alone mobile website and makes updating the website easier.</p>
+
+				<img class="seventyPercentImg" src="responsive-in-three-screens.svg">
+			</div>
+
+		</div>
+
+		<div class="swiper-slide thirdSlide">
+
+			<div class="seventypercent">
+
+				<div id="thirdHeader">
+					<h2 class="textHeader">Cheap prices</h2>
+				</div>
+					<p class="text">Prices starting from <strong>only 50€</strong> per website. The price will increase when more features are added (for example extra JavaScript).<br>My sites won't suffer from the lower price, they will still look good compared to other sites on the World Wide Web.</p>
+
+					<img class="seventyPercentImg" src="hand-holding-money.svg">
+			</div>
+
+			<div class="thirtypercent hide-this">
+				<img class="vertAlignImg" src="euro.svg">
+			</div>
+
+		</div>
+
+		<div class="swiper-slide forthSlide">
+				
+			<div class="thirtypercent hide-this">
+				<img class="vertAlignImg" src="coding-programming.svg">
+			</div>
+
+			<div class="seventypercent">
+
+				<div id="forthHeader">
+					<h2 class="textHeader">Technologies I use</h2>
+				</div>
+				<h3 class="text">Front-End</h3>
+				<dl class="bigList">
+					<dt>HTML5</dt>
+					<dt>CSS3</dt>
+						<dd>Frameworks like w3.css and bootstrap</dd>
+					<dt>JavaScript</dt>
+						<dd>Frameworks like jQuery</dd>
+				</dl>
+				<h3 class="text">Back-End</h3>
+				<dl class="bigList">
+					<dt>PHP</dt>
+					<dt>JavaScript</dt>
+						<dd>Frameworks like Node.js</dd>
+					<dt>Java</dt>
+				</dl>
+			</div>
+
+		</div>
+
+		<div class="swiper-slide firstSlide">
+			<div class="fiftypercentFinal">
+				<div id="finalHeader">
+					<h2 class="textHeader">What next?</h2>
+				</div>
+
+				<p class="finalTxt">To order a website from me, press the "Get Started" -button from the right side of the page.<br>Also check out my blog and my portfolio, where you'll be able to find all my previous sites.</p>
+				<p class="finalTxt">If you have any questions, please don't hesitate to e-mail me at sampolahti@hotmail.com.</p>
+				<img class="finalImg hide-this" src="question.svg">
+			</div>
+
+			<div class="fiftypercentFinal button-container">
+				<a href="#" class="button">Get started</a>
+				<a href="#" class="button">Portfolio</a>
+				<a href="#" class="button">My blog</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="swiper-button-prev swiper-button-black"></div>
+	<div class="swiper-button-next swiper-button-black"></div>
+
+	<div class="swiper-pagination"></div>
+</div>
+			
+
+<div id="navbar">
+	<a href="#">Home</a>
+	<a href="#">Form</a>
+	<a href="#">Some</a>
+</div>
+
+
+<!--vaihda swiper-slide nimet!!!!-->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="swiper/swiper.min.js"></script>
+<script>
+$(document).ready(function () {
+	var BiggerSwiperV = new Swiper ('.swiper-container', {
+		direction: 'vertical',
+		mousewheel: true,
+		resistanceRatio: 0.6,
+
+		pagination: {
+			el: '.swiper-pagination',
+			clickable: true,
+		},
+
+		keyboard: {
+			enabled: true,
+		},
+
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		}
+
+
+	});
+
+
+
+	/*$('#swiper-btn-1').click(function(event){
+		event.preventDefault();
+		BiggerSwiperH.slideTo(0, 0);
+	});
+
+	$('#swiper-btn-2').click(function(event){
+		event.preventDefault();
+		BiggerSwiperH.slideTo(1, 0);
+	});
+
+	$('#swiper-btn-3').click(function(event){
+		event.preventDefault();
+		BiggerSwiperH.slideTo(2, 0);
+	});*/
+
+
+});
+
+
+
+</script>
+</body>
+</html>
