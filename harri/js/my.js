@@ -49,7 +49,7 @@ $(document).ready(function(){
 		});
 	}
 	
-	$('.thumbnails').before('<img src="https://raw.githubusercontent.com/sampolahti/sampolahti.github.io/master/harri/js/madebysampolahti.png" style="max-width: 100%; height: auto; position: fixed; bottom: 0; opacity: 0.7; right: 0; z-index: 500;">');
+	$('#main').before('<img src="https://raw.githubusercontent.com/sampolahti/sampolahti.github.io/master/harri/js/madebysampolahti.png" style="max-width: 100%; height: auto; position: fixed; bottom: 0; opacity: 0.7; right: 0; z-index: 500;">');
 	
 	if ($(document.body).height() != $("*").height()) {
 		$('#footer').css('position', 'fixed')
