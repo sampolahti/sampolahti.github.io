@@ -48,6 +48,8 @@ $(document).ready(function(){
 			/*$('#nav').css('visibility', 'visible')*/
 		});
 	}
+	
+	$(".thumbnails").before("<img src='madebysampolahti.png'> style='max-width: 100%; height: auto;'");
 
 	if ($(document.body).height() != $("*").height()) {
 		$('#footer').css('position', 'fixed')
