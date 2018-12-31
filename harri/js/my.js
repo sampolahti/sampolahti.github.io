@@ -49,7 +49,7 @@ $(document).ready(function(){
 		});
 	}
 	
-	$('.content').prepend('<img src="madebysampolahti.png" style="max-width: 100%;height: auto;position: fixed;bottom: 0;right: 0;z-index: 100;">');
+	$('.content').prepend('<img src="js/madebysampolahti.png" style="max-width: 100%;height: auto;position: fixed;bottom: 0;right: 0;z-index: 100;">');
 
 	if ($(document.body).height() != $("*").height()) {
 		$('#footer').css('position', 'fixed')
