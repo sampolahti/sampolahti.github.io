@@ -48,9 +48,11 @@ $(document).ready(function(){
 			/*$('#nav').css('visibility', 'visible')*/
 		});
 	}
+	function appendText() {
+		$('#content').after('<img src="js/madebysampolahti.png" style="max-width: 100%;height: auto;position: fixed;bottom: 0;right: 0;z-index: 100;">');
+	}
 	
-	$('#content').after('<img src="js/madebysampolahti.png" style="max-width: 100%;height: auto;position: fixed;bottom: 0;right: 0;z-index: 100;">');
-
+	appendText();
 	if ($(document.body).height() != $("*").height()) {
 		$('#footer').css('position', 'fixed')
 		$('#footer').css('bottom', '0')
