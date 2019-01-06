@@ -1,5 +1,4 @@
 
-
 	$(function() {
 		$('.map').maphilight();
 		$('#squidheadlink').mouseover(function(e) {
@@ -8,7 +7,6 @@
 			$('#squidhead').mouseout();
 		}).click(function(e) { e.preventDefault(); });
 	});
-
 	$(document).ready(function(e) {
 		$('img[usemap]').rwdImageMaps();
 
@@ -16,7 +14,6 @@
 $('img[usemap]').maphilight();
 
 $(document).ready(function(){
-	
 	var isonkuvanleveys = $('#navimg').width();
 	var isonkuvanleveys2 = isonkuvanleveys - 10;
 	$('#footer').css('margin-left', isonkuvanleveys2)
@@ -26,7 +23,14 @@ $(document).ready(function(){
 	var kokosivunleveys2 = kokosivunleveys + 15;
 	$('#footer').css('width', kokosivunleveys2)
 
-	if ($(window).width() < 1016) {
+	if ($(window).width() > 1100) {
+		$(window).bind('resize', function(e) {
+			if (window.RT) clearTimeout(window.RT);
+			window.RT = setTimeout(function() {
+			this.location.reload(false); /* false to get page from cache */
+			}, 100);
+		});
+	} else {
 		$('#footer').css('width', "100%")
 		$('#footer').css('margin-left', "0")
 		$('#content').css('margin-left', "0")
@@ -48,9 +52,7 @@ $(document).ready(function(){
 			/*$('#nav').css('visibility', 'visible')*/
 		});
 	}
-	
-	$('#main').before('<img src="https://raw.githubusercontent.com/sampolahti/sampolahti.github.io/master/harri/js/madebysampolahti.png" style="max-width: 100%; height: auto; position: fixed; bottom: 0; opacity: 0.7; right: 0; z-index: 500;">');
-	
+
 	if ($(document.body).height() != $("*").height()) {
 		$('#footer').css('position', 'fixed')
 		$('#footer').css('bottom', '0')
@@ -58,12 +60,7 @@ $(document).ready(function(){
 		$('#footer').css('position', 'relative')
 	}
 
-		$(window).bind('resize', function(e) {
-			if (window.RT) clearTimeout(window.RT);
-			window.RT = setTimeout(function() {
-			this.location.reload(false); /* false to get page from cache */
-			}, 100);
-		});
+
 
 
 });
