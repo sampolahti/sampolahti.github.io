@@ -78,15 +78,15 @@ Kuvat ja tekstit: Harri Haarala ©
 
 <script>
 	
-$(document).ready(function(){
+$(window).load(function(){
 	
 	var isonkuvanleveys1 = $('#navimg').width();
-	var isonkuvanleveys3 = isonkuvanleveys - 4;
+	var isonkuvanleveys3 = isonkuvanleveys1 - 4;
 	$('#footer').css('margin-left', isonkuvanleveys3)
 	$('#content').css('margin-left', isonkuvanleveys1)
 
 	var kokosivunleveys1 = $('#content').width();
-	var kokosivunleveys3 = kokosivunleveys + 2;
+	var kokosivunleveys3 = kokosivunleveys1 + 2;
 	$('#footer').css('width', kokosivunleveys3)
 
 	if ($(window).width() < 1016) {
