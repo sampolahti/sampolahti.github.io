@@ -76,59 +76,6 @@ Kuvat ja tekstit: Harri Haarala ©
 <script src="js/jquery.maphilight.min.js"></script>
 <script src="js/my.js"></script>
 
-<script>
-	
-$(window).load(function(){
-	
-	var isonkuvanleveys1 = $('#navimg').width();
-	var isonkuvanleveys3 = isonkuvanleveys1 - 4;
-	$('#footer').css('margin-left', isonkuvanleveys3)
-	$('#content').css('margin-left', isonkuvanleveys1)
-
-	var kokosivunleveys1 = $('#content').width();
-	var kokosivunleveys3 = kokosivunleveys1 + 2;
-	$('#footer').css('width', kokosivunleveys3)
-
-	if ($(window).width() < 1016) {
-		$('#footer').css('width', "100%")
-		$('#footer').css('margin-left', "0")
-		$('#content').css('margin-left', "0")
-
-		$('#mobile-bar-button').click(function(){
-			$('#nav').toggleClass('visible1')
-
-			var clicks1 = $(this).data('clicks');
-			if (clicks1) {
-				$('#mobile-bar-button').addClass("fas fa-stream");
-				$('#mobile-bar-button').removeClass("cool-effect")
-				$('#mobile-bar-button').removeClass("fa fa-close");
-			} else {
-				$('#mobile-bar-button').addClass("fa fa-close");
-				$('#mobile-bar-button').addClass("cool-effect")
-				$('#mobile-bar-button').removeClass("fas fa-stream");
-			}
-			$(this).data("clicks", !clicks1);
-			/*$('#nav').css('visibility', 'visible')*/
-		});
-	}
-
-	if ($(document.body).height() != $("*").height()) {
-		$('#footer').css('position', 'fixed')
-		$('#footer').css('bottom', '0')
-	} else {
-		$('#footer').css('position', 'relative')
-	}
-
-		$(window).bind('resize', function(e) {
-			if (window.RT) clearTimeout(window.RT);
-			window.RT = setTimeout(function() {
-			this.location.reload(false); /* false to get page from cache */
-			}, 100);
-		});
-
-
-});
-</script>
 
 </body>
 </html>
