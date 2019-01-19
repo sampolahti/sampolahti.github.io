@@ -37,6 +37,15 @@
 	});
 $('img[usemap]').maphilight();
 
+$(window).ready(function(){
+	$(window).bind('resize', function(e) {
+		if (window.RT) clearTimeout(window.RT);
+		window.RT = setTimeout(function() {
+		this.location.reload(false); /* false to get page from cache */
+		}, 100);
+	});
+});
+
 $(window).on("load", function() {
 	var isonkuvanleveys = $('#navimg').width();
 	var isonkuvanleveys2 = isonkuvanleveys - 10;
@@ -46,12 +55,7 @@ $(window).on("load", function() {
 	var kokosivunleveys = $('#content').width() + 15;
 	$('#footer').css('width', kokosivunleveys)
 
-	$(window).bind('resize', function(e) {
-		if (window.RT) clearTimeout(window.RT);
-		window.RT = setTimeout(function() {
-		this.location.reload(false); /* false to get page from cache */
-		}, 100);
-	});
+
 
 	if ($(window).width() <= 1100) {
 		$('#footer').css('width', "100%")
