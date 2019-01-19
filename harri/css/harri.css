@@ -122,8 +122,8 @@ img { position: relative; }
 
 .alkukuva {
 	float: left;
-	margin: 1em 0 0 11.5em;
-	width: 310px;
+	margin: 6em 0 0 11.5em;
+	width: 820px;
 	height: auto;
 }
 
@@ -135,9 +135,39 @@ img { position: relative; }
 	display: none;
 }
 
+@media only screen and (max-width: 2600px) {
+	.alkukuva {
+		float: left;
+		margin: 4em 0 0 11.5em;
+		width: 410px;
+		height: auto;
+	}
+}
+
 @media only screen and (max-width: 1600px) {
 	#footer {
 		padding: 0.5em;
+	}
+
+	.alkukuva {
+		float: left;
+		margin: 1em 0 0 11.5em;
+		width: 310px;
+		height: auto;
+	}
+}
+
+
+@media only screen and (max-width: 1600px) {
+	#footer {
+		padding: 0.5em;
+	}
+
+	.alkukuva {
+		float: left;
+		margin: 1em 0 0 11.5em;
+		width: 310px;
+		height: auto;
 	}
 }
 
