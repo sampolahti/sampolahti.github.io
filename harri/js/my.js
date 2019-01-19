@@ -38,13 +38,13 @@
 $('img[usemap]').maphilight();
 
 $(document).ready(function(){
-	var isonkuvanleveys = $('#navimg').width();
-	var isonkuvanleveys2 = isonkuvanleveys - 10;
-	$('#footer').css('margin-left', isonkuvanleveys2)
-	$('#content').css('margin-left', isonkuvanleveys)
+	var mainPicWidth = $('#navimg').width();
+	var mainPicWidth2 = isonkuvanleveys - 10;
+	$('#footer').css('margin-left', mainPicWidth2)
+	$('#content').css('margin-left', mainPicWidth)
 
-	var kokosivunleveys = $('#content').width() + 15;
-	$('#footer').css('width', kokosivunleveys)
+	var wholePageWidth = $('#content').width() + 15;
+	$('#footer').css('width', wholePageWidth)
 
 	$(window).bind('resize', function(e) {
 		if (window.RT) clearTimeout(window.RT);
