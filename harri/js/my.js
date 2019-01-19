@@ -44,6 +44,16 @@ $(window).ready(function(){
 		this.location.reload(false); /* false to get page from cache */
 		}, 100);
 	});
+
+
+	if ($(document.body).height() != $("*").height()) {
+		$('#footer').css('position', 'fixed')
+		$('#footer').css('bottom', '0')
+	} else {
+		$('#footer').css('position', 'relative')
+	}
+
+
 });
 
 $(window).on("load", function() {
@@ -79,14 +89,6 @@ $(window).on("load", function() {
 			/*$('#nav').css('visibility', 'visible')*/
 		});
 	}
-
-	if ($(document.body).height() != $("*").height()) {
-		$('#footer').css('position', 'fixed')
-		$('#footer').css('bottom', '0')
-	} else {
-		$('#footer').css('position', 'relative')
-	}
-
 
 
 
