@@ -37,14 +37,14 @@
 	});
 $('img[usemap]').maphilight();
 
-$(document).ready(function(){
-	var mainPicWidth = $('#navimg').width();
-	var mainPicWidth2 = mainPicWidth - 10;
-	$('#footer').css('margin-left', mainPicWidth2)
-	$('#content').css('margin-left', mainPicWidth)
+$(window).on("load", function() {
+	var isonkuvanleveys = $('#navimg').width();
+	var isonkuvanleveys2 = isonkuvanleveys - 10;
+	$('#footer').css('margin-left', isonkuvanleveys2)
+	$('#content').css('margin-left', isonkuvanleveys)
 
-	var wholePageWidth = $('#content').width() + 15;
-	$('#footer').css('width', wholePageWidth)
+	var kokosivunleveys = $('#content').width() + 15;
+	$('#footer').css('width', kokosivunleveys)
 
 	$(window).bind('resize', function(e) {
 		if (window.RT) clearTimeout(window.RT);
