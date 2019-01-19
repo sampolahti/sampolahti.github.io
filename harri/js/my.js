@@ -39,7 +39,7 @@ $('img[usemap]').maphilight();
 
 $(document).ready(function(){
 	var mainPicWidth = $('#navimg').width();
-	var mainPicWidth2 = isonkuvanleveys - 10;
+	var mainPicWidth2 = mainPicWidth - 10;
 	$('#footer').css('margin-left', mainPicWidth2)
 	$('#content').css('margin-left', mainPicWidth)
 
