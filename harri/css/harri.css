@@ -2,6 +2,9 @@
 body, html {
 	min-height: 100%;
 	width: 100%;
+	overflow-y: scroll; 
+	-webkit-overflow-scrolling: touch;
+	overflow-scrolling: touch;
 }
 
 * {
@@ -65,11 +68,6 @@ p {
 
 img { position: relative; }
 
-.box2 {
-  display: inline-block;
-  float: left;
-  margin: 100px 0px 0px 200px;
-}
 
 .thumbnails {
 	display: flex;
@@ -123,8 +121,51 @@ img { position: relative; }
 	visibility: visible!important;
 }
 
+#mobile-indicator {
+	display: none;
+}
+
+.alkukuva {
+	float: left;
+	margin: 1em 0 0 11.5em;
+	width: 310px;
+	height: auto;
+}
+
+#alku-pyötäkone {
+	display: block;
+}
+
+#alku-mobiili {
+	display: none;
+}
+
+@media only screen and (max-width: 1600px) {
+	#footer {
+		padding: 0.5em;
+	}
+}
 
 @media only screen and (max-width: 1100px) {
+
+	#mobile-indicator {
+		display: block;
+	}
+
+	.alkukuva {
+		display: block;
+		margin: 2.5em 0 0 13em;
+		float: none;
+	}
+
+	#alku-pyötäkone {
+		display: none;
+	}
+
+	#alku-mobiili {
+		display: block;
+	}
+
 	#main {
 		padding-top: 2.7em;
 		height: auto;
@@ -163,5 +204,15 @@ img { position: relative; }
 		font-size: 0.9em;
 		padding: 0.5em 0em;
 		width: 100%;
+	}
+
+}
+
+@media only screen and (max-width: 700px) {
+	.alkukuva {
+		display: block;
+		margin: auto;
+		float: none;
+		padding: 1em;
 	}
 }
