@@ -38,12 +38,10 @@ body, html {
 	background-color:black;
 	color:white;
 	clear:both;
-	text-align:center;
-	position: absolute;	
+	text-align:center;	
 	bottom: 0;
 	padding: 0.8em;
 	display: block;
-	width: auto;
 	position: fixed;
 }
 
