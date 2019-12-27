@@ -185,6 +185,7 @@ header.under, header.under::before {
 	height: 100vh;
 	width: 35%;
 	z-index: 2;
+	transition: 0.5s width;
 }
 
 .info::before {
@@ -223,8 +224,16 @@ header.under, header.under::before {
 	position: static;
 }
 
-.info-inner {
+#info-inner {
 	padding: 8rem 0.5rem 0.5rem 0.5rem;
+}
+
+.ninetypercent-width {
+	width: 90%;
+}
+
+#ninehundredpixels {
+	width: 900px;
 }
 
 @media only screen and (max-width: 900px) {
@@ -244,7 +253,7 @@ header.under, header.under::before {
 		position: relative;
 	}
 
-	.info-inner {
+	#info-inner {
 		padding: 0.5rem;
 	}
 
