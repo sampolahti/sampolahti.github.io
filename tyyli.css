@@ -1,15 +1,12 @@
 :root {
-	--hover-color: rgba(68, 0, 255, 0.8) /*#4400ff rgba(186, 255, 230, 0.8)*/;
-	--btn-hover-color: rgba(167, 135, 255, 1);
-	--bg-color: #f0f0f0;
-	--btn-color: white;
-	--vote-color: #4400ff;
-	--post-color: white; /* rgba(186, 255, 230, 1.0) */
-	--link-color: #4400ff;
-	--grey: #707070;
+	--blue: #698ad6;
+	--white: #e8e6eb;
 }
-
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, 
+big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, under, strike, strong, sub, sup, tt, var, b, u, i, center, 
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, 
+canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, 
+audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -61,9 +58,6 @@ p {
 	font-kerning: 1.1em;
 }
 
-html, body {
-	overflow-x: hidden;
-}
 
 @font-face {
 	font-family: Ethnocentricg;
@@ -83,31 +77,201 @@ h2 {
 	margin-bottom: 0.2em;
 }
 
-header {
-	padding: 0 0.5em;
-	padding-top: 0.5em;
-	background: blue;
-	height: 4rem;
+body {
+	width: 100%;
+	overflow-x: hidden;
+	overflow-y: hidden;
 }
 
-header h1 {
+header, header.under {
+	background: var(--blue);
+	position: absolute;
+	top: 0;
+	width: 100vw;
+	z-index: 5;
+	height: 5rem;
+}
+
+header img {
 	position: absolute;
 	text-align: center;
 	width: 100%;
 	padding-top: 0.1em;
+	color: white;
+	height: 5.6rem;
 }
 
 header::after {
 	content: '';
-	transform: rotate(1deg);
-	background: blue;
-	width: 110%;
-	height: 4rem;
-	display: block;
+	width: 0;
+	height: 0;
+	top: 5rem;
 	position: absolute;
-	left: -2%;
-	top: 2rem;
-	z-index: -1;
-	box-shadow: 2px 2px 40px 1px rgba(0,0,0,0.75);
-	
+	border-bottom: 2rem solid transparent;
+	border-left: 100vw solid var(--blue);
+	z-index: 5;
+}
+
+header.under {
+	background: black;
+	height: 5.1rem;
+	z-index: 4;
+}
+
+header.under::before {
+	content: '';
+	width: 0;
+	height: 0;
+	top: 5.1rem;
+	position: absolute;
+	border-bottom: 2rem solid transparent;
+	border-left: 100vw solid black;
+	z-index: 4;
+}
+
+header.under, header.under::before {
+	filter: blur(0.4em);
+}
+
+@keyframes fadePic {
+	0% {opacity: 0;}
+	1% {opacity: 1;}
+	33.33% {opacity: 1;}
+	34.33% {opacity: 0;}
+	100% {opacity: 0;}
+}
+
+.images {
+	width: 100%;
+	position: relative;
+	height: 100vh;
+}
+
+
+.images div {
+	position: absolute;
+	top: 0;
+	animation-fill-mode: both;
+	animation-iteration-count: infinite;
+	animation-name: fadePic;
+	animation-duration: 25s;
+
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 100%;
+}
+
+#img1 {
+	background-image: url('1-1.jpg');
+}
+
+#img2 {
+	animation-delay: 8.33s;
+	background-image: url('2.jpg');
+}
+
+
+#img3 {
+	animation-delay: 16.66s;
+	background-image: url('3.jpg');
+}
+
+.info, .infoUnder {
+	background: var(--white);
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 100vh;
+	width: 35%;
+	z-index: 2;
+}
+
+.info::before {
+	content: '';
+	width: 0;
+	height: 0;
+	margin-left: -10rem;
+	position: absolute;
+	border-left: 10rem solid transparent;
+	border-bottom: 100vh solid var(--white);
+	z-index: 3;
+}
+
+.infoUnder {
+	background: black;
+	height: 5.1rem;
+	z-index: 1;
+}
+
+.infoUnder::before {
+	content: '';
+	width: 0;
+	height: 0;
+	margin-left: -10rem;
+	position: absolute;
+	border-left: 10rem solid transparent;
+	border-bottom: 100vh solid black;
+	z-index: 1;
+}
+
+.infoUnder, .infoUnder::before {
+	filter: blur(0.4em);
+}
+
+.info-container {
+	position: static;
+}
+
+.info-inner {
+	padding: 8rem 0.5rem 0.5rem 0.5rem;
+}
+
+@media only screen and (max-width: 900px) {
+	body {
+		overflow-y: visible;
+	}
+
+
+	.images {
+		margin-top: 5rem;
+		width: 100%;
+		position: relative;
+		height: 40vh;
+	}
+
+	.info-container {
+		position: relative;
+	}
+
+	.info-inner {
+		padding: 0.5rem;
+	}
+
+	.info, .infoUnder {
+		min-height: calc(100vh - 5rem - 40vh);
+		height: auto;
+		width: 100%;
+		z-index: 2;
+	}
+
+	.info::before {
+		top: -2rem;
+		right: 0;
+		border-left: 100vw solid transparent;
+		border-bottom: 2rem solid var(--white);
+	}
+
+	.infoUnder {
+		background: black;
+		height: 5.1rem;
+		z-index: 1;
+	}
+
+	.infoUnder::before {
+		top: -2rem;
+		right: 0;
+		border-left: 100vw solid transparent;
+		border-bottom: 2rem solid black;
+	}
 }
