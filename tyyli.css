@@ -6,7 +6,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, under, strike, strong, sub, sup, tt, var, b, u, i, center, 
 dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, 
 canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, 
-audio, video {
+audio, video, button {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -18,7 +18,7 @@ audio, video {
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 	font-size: 100%;
-	font-family: sans-serif;
+	font-family: 'Ubuntu', sans-serif;
 }
 
 i {
@@ -58,23 +58,22 @@ p {
 	font-kerning: 1.1em;
 }
 
-
-@font-face {
-	font-family: Ethnocentricg;
-	src: url('ethnocentric_rg.ttf');
-}
-
 h1 {
 	font-size: 3em;
 	text-align: center;
-	font-family: 'Ethnocentricg';
 	z-index: 10;
 }
 
 h2 {
-	font-size: 1.6em;
-	display: inline-block;
-	margin-bottom: 0.2em;
+	font-size: 1.4em;
+	font-style: italic;
+	text-align: center;
+	margin: 0.4em 0;
+}
+
+h3 {
+	font-size: 1.35em;
+	text-align: center;
 }
 
 body {
@@ -192,7 +191,7 @@ header.under, header.under::before {
 	content: '';
 	width: 0;
 	height: 0;
-	margin-left: -10rem;
+	margin-left: calc(-10rem + 2px);
 	position: absolute;
 	border-left: 10rem solid transparent;
 	border-bottom: 100vh solid var(--white);
@@ -209,7 +208,7 @@ header.under, header.under::before {
 	content: '';
 	width: 0;
 	height: 0;
-	margin-left: -10rem;
+	margin-left: calc(-10rem + 2px);
 	position: absolute;
 	border-left: 10rem solid transparent;
 	border-bottom: 100vh solid black;
@@ -228,12 +227,132 @@ header.under, header.under::before {
 	padding: 8rem 0.5rem 0.5rem 0.5rem;
 }
 
+#info-inner p {
+	padding: 0.5em 0;
+	font-size: 1.3em;
+}
+
 .ninetypercent-width {
 	width: 90%;
 }
 
 #ninehundredpixels {
 	width: 900px;
+}
+
+button {
+	background: transparent;
+	cursor: pointer;
+	font-size: 1.7em;
+	color: black;
+	padding: 0.2em;
+	text-decoration: underline;
+}
+
+.back-button {
+	position: fixed;
+	top: 8rem;
+}
+
+nav {
+	display: flex;
+	flex-direction: column;
+}
+
+nav div {
+	font-size: 2em;
+	cursor: pointer;
+	margin: 0 0 0.3em 0;
+	padding: 0.2em 0;
+}
+
+a {
+	text-decoration: underline;
+	color: black;
+}
+
+a, button, nav div {
+	transition: all 0.2s;
+}
+
+nav div:hover, button:hover, a:hover {
+	color: white;
+	text-shadow: 2px 2px 3px rgba(0,0,0,0.5), -2px 1px 3px rgba(0,0,0,0.7);
+	transition: all 0.2s;
+}
+
+/*
+nav div {
+	background: var(--blue);
+	padding: 0.5rem;
+	margin: 0.5rem 0;
+	box-shadow: 1px 3px 8px 0px rgba(0,0,0,0.4);
+	cursor: pointer;
+	position: relative;
+}
+
+nav div::after {
+	content: '';
+	height: 0;
+	width: 0;
+	border-left: 5rem solid transparent;
+	border-top: 1rem solid var(--blue);
+	position: absolute;
+	bottom: -0.8em;
+	right: 0;
+}
+*/
+
+.flex-container {
+	display: flex;
+	flex-direction: row;
+	padding: 0.5em 2em;
+	justify-content: space-evenly;
+}
+
+.project-pic-container {
+	width: 300px;
+	height: 300px;
+	object-fit: cover;
+	box-shadow: 2px 3px 8px rgba(0,0,0,0.5), -3px 2px 8px rgba(0,0,0,0.6);
+	position: relative;
+}
+
+.labelBackground {
+	height: 0px;
+	width: 100%;
+	background: var(--blue);
+	position: absolute;
+	bottom: 0;
+	transition: 0.2s height;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	overflow-y: hidden;
+	cursor: pointer;
+}
+
+.labelBackground h3 {
+	padding: 0.3em;
+	opacity: 0;
+}
+
+.project-pic-container:hover > .labelBackground {
+	height: 100%;
+}
+
+.project-pic-container:hover > .labelBackground h3 {
+	opacity: 1;
+}
+
+.project-pic-container img {
+	object-fit: cover;
+	height: 100%;
+	width: auto;
+}
+
+.content-wrapper {
+	display: none;
 }
 
 @media only screen and (max-width: 900px) {
@@ -269,6 +388,7 @@ header.under, header.under::before {
 		right: 0;
 		border-left: 100vw solid transparent;
 		border-bottom: 2rem solid var(--white);
+		box-shadow: 1px 1px var(--white);
 	}
 
 	.infoUnder {
@@ -282,5 +402,26 @@ header.under, header.under::before {
 		right: 0;
 		border-left: 100vw solid transparent;
 		border-bottom: 2rem solid black;
+	}
+
+	.back-button {
+		position: static;
+	}
+
+	.flex-container {
+		display: flex;
+		flex-direction: column;
+		padding: 0;
+	}
+
+}
+
+@media only screen and (max-width: 500px) {
+	.project-pic-container {
+		width: calc(100vw - 3rem);
+		height: calc(100vw - 3rem);
+		margin-bottom: 0.5em;
+		margin-left: auto;
+		margin-right: auto;
 	}
 }

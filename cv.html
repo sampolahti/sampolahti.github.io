@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CV</title>
+</head>
+<body>
+	<div class="content-wrapper">
+		<button class="back-button">Back</button>
+		<h1>CV</h1>
+	</div>
+
+	<script src="code.js"></script>
+	<script>
+		history.pushState( { contentId: 3, title: 'CV' }, 'CV', '?p=cv');
+		window.onpopstate = function() {
+			load_front_page();
+		};
+	</script>
+</body>
+</html>

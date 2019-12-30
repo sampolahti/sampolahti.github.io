@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ok</title>
+</head>
+<body>
+	<div class="content-wrapper">
+			<button class="back-button">Back</button>
+		<h1>Portfolio</h1>
+		<h2>Kaikki vuosien varrella julkaisemat projektini löytyvät täältä.</h2>
+		<div class="flex-container">
+
+
+			<div class="project-pic-container">
+				<div class="labelBackground">
+					<a href="http://www.harrihaarala.fi/"><h3>Harri Haaralan nettisivut</h3></a>
+				</div>
+				<img src="projects/harri.png">
+			</div>
+
+
+			<div class="project-pic-container">
+				<div class="labelBackground">
+					<a href="https://prequelmeme.github.io/"><h3>Prequel meme -nettisivut</h3></a>
+				</div>
+				<img src="projects/prequelmeme.png">
+			</div>
+
+			<div class="project-pic-container">
+				<div class="labelBackground">
+					<a href="http://www.kuninkaantie.espoo.fi/"><h3>Kuninkaantien lukion nettisivut</h3></a>
+				</div>
+				<img src="projects/kunkku.png">
+			</div>
+
+		</div>
+	</div>
+
+	<script src="code.js"></script>
+	<script>
+
+		history.pushState( { contentId: 2, title: 'Portfolio' }, 'Portfolio', '?p=portfolio');
+		window.onpopstate = function() {
+			load_front_page();
+		};
+	</script>
+</body>
+</html>
