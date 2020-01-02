@@ -78,8 +78,8 @@ h3 {
 
 body {
 	width: 100%;
-	overflow-x: hidden;
-	overflow-y: hidden;
+	/*overflow-x: hidden;
+	overflow-y: hidden;*/
 }
 
 header, header.under {
@@ -140,6 +140,16 @@ header.under, header.under::before {
 	100% {opacity: 0;}
 }
 
+@keyframes fadeOut {
+	from {opacity: 1}
+	to {opacity: 0;}
+}
+
+@keyframes fadeOut {
+	from {opacity: 1}
+	to {opacity: 0;}
+}
+
 .images {
 	width: 100%;
 	position: relative;
@@ -148,7 +158,7 @@ header.under, header.under::before {
 
 
 .images div {
-	position: absolute;
+	position: fixed;
 	top: 0;
 	animation-fill-mode: both;
 	animation-iteration-count: infinite;
@@ -176,9 +186,10 @@ header.under, header.under::before {
 	background-image: url('3.jpg');
 }
 
+
 .info, .infoUnder {
 	background: var(--white);
-	position: absolute;
+	position: fixed;
 	top: 0;
 	right: 0;
 	height: 100vh;
@@ -224,7 +235,7 @@ header.under, header.under::before {
 }
 
 #info-inner {
-	padding: 8rem 0.5rem 0.5rem 0.5rem;
+	padding: 8rem 0.5rem 0rem 0.5rem;
 }
 
 #info-inner p {
@@ -250,8 +261,13 @@ button {
 }
 
 .back-button {
-	position: fixed;
+	position: absolute;
 	top: 8rem;
+}
+
+.overflow-container {
+	overflow: auto;
+	max-height: calc(100vh - 8rem);
 }
 
 nav {
@@ -307,7 +323,8 @@ nav div::after {
 	display: flex;
 	flex-direction: row;
 	padding: 0.5em 2em;
-	justify-content: space-evenly;
+	flex-wrap: wrap;
+	justify-content: flex-start;
 }
 
 .project-pic-container {
@@ -316,6 +333,7 @@ nav div::after {
 	object-fit: cover;
 	box-shadow: 2px 3px 8px rgba(0,0,0,0.5), -3px 2px 8px rgba(0,0,0,0.6);
 	position: relative;
+	margin: 0 1em 2em 1em;
 }
 
 .labelBackground {
@@ -329,7 +347,6 @@ nav div::after {
 	flex-direction: column;
 	justify-content: space-evenly;
 	overflow-y: hidden;
-	cursor: pointer;
 }
 
 .labelBackground h3 {
@@ -360,12 +377,20 @@ nav div::after {
 		overflow-y: visible;
 	}
 
+	.overflow-container {
+		overflow: visible;
+		max-height: 100%;
+	}
 
 	.images {
 		margin-top: 5rem;
 		width: 100%;
 		position: relative;
 		height: 40vh;
+	}
+
+	.images div {
+		position: absolute;
 	}
 
 	.info-container {
@@ -381,6 +406,7 @@ nav div::after {
 		height: auto;
 		width: 100%;
 		z-index: 2;
+		position: absolute;
 	}
 
 	.info::before {
