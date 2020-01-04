@@ -16,7 +16,8 @@
 				</div>
 
 				<div class="album-container">
-					<div></div>
+					<i class="fa fa-close close-album"></i>
+					<div id="norja2019_content"></div>
 				</div>
 
 
@@ -31,20 +32,24 @@
 			load_front_page();
 		};
 
+		$(".fa-close").click(function(event) {
+			$(this).parent().fadeOut(500);
+		});
+
 		$(".album-cover").click(function() {
 			var id = $(this).attr('id');
 
-			$(this).next().fadeIn(500, function() {
-				$.ajax({
-					url: '/images/'+id+'.html',
+			$.ajax({
+					url: 'images/'+id+'.html',
 					type: 'GET',
 					dataType: 'html',
 					beforeSend: function() {
-						$(this).next().text('Ladataan...');
+						$("#"+id+"_content").text('Ladataan...');
 					},
 				})
-				.done(function() {
+				.done(function(data) {
 					console.log("success");
+					$("#"+id+"_content").html(data);
 				})
 				.fail(function() {
 					console.log("error");
@@ -52,8 +57,7 @@
 				.always(function() {
 					console.log("complete");
 				});
-				
-			});
+				$(this).next().fadeIn();
 		});
 
 	</script>
