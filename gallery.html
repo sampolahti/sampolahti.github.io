@@ -1,13 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Gallery</title>
+	<title>Galleria</title>
 </head>
 <body>
 	<div class="overflow-container">
 		<div class="content-wrapper">
 			<button class="back-button">Back</button>
-			<h1>Gallery</h1>
+			<h1>Galleria</h1>
+			<div class="flex-container">
+
+				<div id="norja2019" class="project-pic-container album-cover">
+					<h3 class="album-label">Norja (2019)</h3>
+					<img src="images/Norja/Norja_intro.jpg">
+				</div>
+
+				<div class="album-container">
+					<div></div>
+				</div>
+
+
+			</div>
 		</div>
 	</div>
 
@@ -17,6 +30,32 @@
 		window.onpopstate = function() {
 			load_front_page();
 		};
+
+		$(".album-cover").click(function() {
+			var id = $(this).attr('id');
+
+			$(this).next().fadeIn(500, function() {
+				$.ajax({
+					url: '/images/'+id+'.html',
+					type: 'GET',
+					dataType: 'html',
+					beforeSend: function() {
+						$(this).next().text('Ladataan...');
+					},
+				})
+				.done(function() {
+					console.log("success");
+				})
+				.fail(function() {
+					console.log("error");
+				})
+				.always(function() {
+					console.log("complete");
+				});
+				
+			});
+		});
+
 	</script>
 </body>
 </html>

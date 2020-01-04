@@ -54,8 +54,8 @@ img {
  
 p {
 	font-size: 1.15em;
-	line-height: 1.3em;
-	font-kerning: 1.1em;
+	line-height: 1.4em;
+	font-kerning: normal;
 }
 
 h1 {
@@ -236,6 +236,7 @@ header.under, header.under::before {
 
 #info-inner {
 	padding: 8rem 0.5rem 0rem 0.5rem;
+	position: relative;
 }
 
 #info-inner p {
@@ -287,11 +288,11 @@ a {
 	color: black;
 }
 
-a, button, nav div {
+a, button, nav div, .album-label {
 	transition: all 0.2s;
 }
 
-nav div:hover, button:hover, a:hover {
+nav div:hover, button:hover, a:hover, .project-pic-container:hover .album-label {
 	color: white;
 	text-shadow: 2px 2px 3px rgba(0,0,0,0.5), -2px 1px 3px rgba(0,0,0,0.7);
 	transition: all 0.2s;
@@ -331,9 +332,53 @@ nav div::after {
 	width: 300px;
 	height: 300px;
 	object-fit: cover;
-	box-shadow: 2px 3px 8px rgba(0,0,0,0.5), -3px 2px 8px rgba(0,0,0,0.6);
 	position: relative;
 	margin: 0 1em 2em 1em;
+	transition: 0.2s all;
+}
+
+.project-pic-container, .album-container {
+	box-shadow: 2px 3px 8px rgba(0,0,0,0.5), -3px 2px 8px rgba(0,0,0,0.6);
+}
+
+.album-container {
+	width: calc(100% - 3rem);
+	height: calc(100vh - 9rem);
+	position: absolute;
+	left: 1rem;
+	top: 8rem;
+	background: white;
+	z-index: 2;
+	display: none;
+}
+
+.album-container h3 {
+	position: relative;
+	width: auto;
+	height: auto;
+}
+
+.album-cover {
+	cursor: pointer;
+}
+
+.album-cover img {
+	filter: grayscale(30%);
+}
+
+.album-label {
+	position: absolute;
+	padding: 0.5em;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	color: white;
+	text-shadow: 2px 2px 3px rgba(0,0,0,0.5), -2px 1px 3px rgba(0,0,0,0.7);
 }
 
 .labelBackground {
@@ -350,7 +395,7 @@ nav div::after {
 }
 
 .labelBackground h3 {
-	padding: 0.3em;
+	margin: 0.5em;
 	opacity: 0;
 }
 
