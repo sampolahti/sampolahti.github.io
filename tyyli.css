@@ -276,7 +276,7 @@ nav {
 	flex-direction: column;
 }
 
-nav div {
+nav div, nav a {
 	font-size: 2em;
 	cursor: pointer;
 	margin: 0 0 0.3em 0;
@@ -286,6 +286,10 @@ nav div {
 a {
 	text-decoration: underline;
 	color: black;
+}
+
+nav a {
+	text-decoration: none;
 }
 
 a, button, nav div, .album-label {

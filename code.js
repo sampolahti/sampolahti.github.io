@@ -68,6 +68,7 @@ function load_sub_page(url) {
 			url: url+'.html',
 			type: 'GET',
 			dataType: 'html',
+			cache: false,
 			beforeSend: function() {
 				$("#info-inner").text('Ladataan...');
 			},
@@ -100,6 +101,7 @@ function load_front_page() {
 			url: 'main.html',
 			type: 'GET',
 			dataType: 'html',
+			cache: false,
 			beforeSend: function() {
 				$("#info-inner").text('loading');
 			},
