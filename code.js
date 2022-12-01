@@ -29,8 +29,8 @@ function testQueryString() {
 			load_front_page();
 		} else if (window.location.search == "?p=portfolio") {
 			load_sub_page("portfolio");
-		} else if (window.location.search == "?p=cv") {
-			load_sub_page("cv");
+		} else if (window.location.search == "?p=code") {
+			load_sub_page("code");
 		} else if (window.location.search == "?p=gallery") {
 			load_sub_page("gallery");
 		} else {
